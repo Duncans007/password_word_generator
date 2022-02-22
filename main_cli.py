@@ -20,37 +20,36 @@ if __name__ == "__main__":
         print(print_screen_break)
 
         # ask for word/char count
-        while True:
-            try:
-                word_count = int(input("How many words: "))
-                break
-            except ValueError:
-                print("Not a valid input. Please try again.")
+        word_count = input("How many words: ")
+        char_count = input("How many characters: ")
 
-        while True:
-            try:
-                char_count = int(input("How many characters: "))
-                break
-            except ValueError:
-                print("Not a valid input. Please try again.")
 
 
         # generate password, display result
-        generated_password = generate_password(word_count, char_count, dictionary)
-        print(generated_password)
-        print(print_screen_break)
+        try:
+            word_count = int(word_count)
+            char_count = int(char_count)
 
-        # ask if want to generate another
-        while True:
-            running = input("Would you like to generate another? (y/n): ").lower()
-            if running == "y":
-                running = True
-                break
-            elif running == "n":
-                running = False
-                print("Thank you for using password_word_generator.")
-                sleep(2)
-                break
-            else:
-                print("\n\n")
-                print(f"{running} is not a valid option. Please try again.")
+            generated_password = generate_password(word_count, char_count, dictionary)
+
+            print(generated_password)
+            print(print_screen_break)
+
+            # ask if want to generate another
+            while True:
+                running = input("Would you like to generate another? (y/n): ").lower()
+                if running == "y":
+                    running = True
+                    break
+                elif running == "n":
+                    running = False
+                    print("Thank you for using password_word_generator.")
+                    sleep(2)
+                    break
+                else:
+                    print("\n\n")
+                    print(f"{running} is not a valid option. Please try again.")
+
+        # Error handling for trying too-long words
+        except (KeyError, ValueError):
+            print("Error: Invalid Input. Try Again.")

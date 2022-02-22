@@ -5,3 +5,7 @@
 -copied dictionary from Wordle clone project (from http://www.gwicks.net/dictionaries.htm)
 -created command line interface for using functions
 -created graphical user interface with Tkinter
+-added error handling for words of improper length
+-modified error handling for integer inputs in CLI and streamlined by combining with improper word length handling
+
+-todo: change word length generation to happen randomly and eliminate short (1-3 letters) words

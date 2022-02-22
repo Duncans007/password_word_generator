@@ -38,7 +38,7 @@ def main():
             # write generated password to output field
             entry_generated_password.insert(0, gen_pass)
 
-        except ValueError:
+        except (ValueError, KeyError):
             # if an error is thrown, set output to "Error: Invalid Input"
             entry_generated_password.insert(0, "Error: Invalid Input")
 
