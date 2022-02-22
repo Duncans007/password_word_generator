@@ -27,14 +27,14 @@ Todo: implement varying word lengths
 
 ---
 
-![CLI image](/img/img_cli.png)
-
 CLI can be accessed by running `main_cli.py`
+
+![CLI image](/img/img_cli.png)
 
 ---
 
-![GUI image](/img/img_gui.png)
-
 GUI can be accessed by running `main_gui.py`
+
+![GUI image](/img/img_gui.png)
 
 ---
