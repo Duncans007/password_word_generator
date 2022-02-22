@@ -3,3 +3,4 @@
 -wrote generate_password() function
 -wrote import_dictionary() function
 -copied dictionary from Wordle clone project (from http://www.gwicks.net/dictionaries.htm)
+-created command line interface for using functions
